@@ -23,9 +23,10 @@ cada página se puede copiar casi directo a un `.aspx`.
   `bt_postulaciones_v1`, `bt_config_v1`). En producción se sustituyen por
   postbacks / servicios reales.
 
-**Correr localmente:** `node server.js` → `http://localhost:8080/distribuidores/BolsaTrabajo/Vacantes.html`
-(hace falta servidor porque los assets usan rutas absolutas `/assets/...`, igual
-que producción; abrir el HTML con doble clic NO funciona).
+**Correr localmente:** `node server.js` → `http://localhost:8080/` (el
+`index.html` redirige al Inicio). Las rutas son **relativas** (se convirtieron
+para poder publicar la demo en GitHub Pages); al integrar a producción WebForms
+pueden volver a absolutas sin problema, el markup es el mismo.
 
 ## 2. Páginas del módulo
 

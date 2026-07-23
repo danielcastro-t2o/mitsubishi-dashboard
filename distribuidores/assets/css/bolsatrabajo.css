@@ -88,6 +88,72 @@
     margin-bottom: 28px;
 }
 
+/* Fix input date en iOS: el valor sale centrado/desbordado con el height del form-control */
+input[type="date"].form-control {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="date"].form-control::-webkit-date-and-time-value {
+    text-align: left;
+    line-height: normal;
+}
+
+/* Liga "Volver" tipo breadcrumb, arriba del título de página */
+.bt-volver {
+    margin: 24px 0 -8px;
+}
+
+.bt-volver a {
+    color: #828282;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.bt-volver a:hover {
+    color: #e60012;
+    text-decoration: none;
+}
+
+/* Cabecera del candidato (detalle de postulación) */
+.bt-candidato {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+
+.bt-candidato-nombre {
+    color: #001a5e;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.bt-candidato-vacante {
+    color: #828282;
+    font-size: 14px;
+}
+
+.bt-candidato-badge { margin-left: auto; }
+
+.bt-divisor {
+    border-top: 1px solid #eaeaea;
+    margin: 20px 0;
+}
+
+.bt-cv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bt-cv .bt-dato-valor { margin-bottom: 0; }
+
 /* Ficha del candidato (detalle de postulación) */
 .bt-dato-label {
     color: #001a5e;

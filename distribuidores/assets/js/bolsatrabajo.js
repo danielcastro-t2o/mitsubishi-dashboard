@@ -371,6 +371,7 @@
             document.getElementById('dTelefono').textContent = p.telefono;
             document.getElementById('dFecha').textContent = BT.fmtFecha(p.fecha);
             document.getElementById('dVacante').textContent = v ? v.titulo : '—';
+            document.getElementById('dBadge').innerHTML = BT.badgePostulacion(p);
             document.getElementById('dCvNombre').textContent = p.cv;
             document.getElementById('lnkCv').setAttribute('download', p.cv);
             document.getElementById('ddlEstatusDetalle').value = p.estatus;
@@ -381,6 +382,7 @@
                 p.estatus = $('#ddlEstatusDetalle').val();
                 BT.savePostulaciones();
                 BT.sidebarBadge();
+                document.getElementById('dBadge').innerHTML = BT.badgePostulacion(p);
                 swal('Listo', 'El estatus de la postulación se actualizó correctamente.', 'success');
             });
         }

@@ -128,6 +128,9 @@
                 </nav>
 
                 <div class="content-area">
+                    <div class="bt-volver">
+                        <a href="Postulaciones.html"><i class="fa fa-arrow-left mr-1"></i> Volver a postulaciones</a>
+                    </div>
                     <div class="page-header borderLeft">
                         <div class="page-title">
                             Dashboard t2ó MX
@@ -140,45 +143,40 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title">Datos del candidato</h3>
-                                    <div class="col text-right">
-                                        <a href="Postulaciones.html" class="btn btn-outline-primary btn-sm"><i class="fa fa-arrow-left mr-1"></i> Volver</a>
-                                    </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="bt-dato-label">Nombre completo</div>
-                                            <div class="bt-dato-valor" id="dNombre"></div>
+                                    <div class="bt-candidato">
+                                        <div>
+                                            <div class="bt-candidato-nombre" id="dNombre"></div>
+                                            <div class="bt-candidato-vacante"><i class="fa fa-briefcase mr-1"></i> <span id="dVacante"></span></div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="bt-candidato-badge" id="dBadge"></div>
+                                    </div>
+                                    <div class="bt-divisor"></div>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6">
                                             <div class="bt-dato-label">Correo electrónico</div>
                                             <div class="bt-dato-valor" id="dEmail"></div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4 col-md-6">
                                             <div class="bt-dato-label">Teléfono de contacto</div>
                                             <div class="bt-dato-valor" id="dTelefono"></div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4 col-md-6">
                                             <div class="bt-dato-label">Fecha de postulación</div>
                                             <div class="bt-dato-valor" id="dFecha"></div>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="bt-dato-label">Vacante</div>
-                                            <div class="bt-dato-valor" id="dVacante"></div>
-                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Currículum</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="bt-dato-label">Archivo adjunto</div>
-                                    <div class="bt-dato-valor" id="dCvNombre"></div>
-                                    <a id="lnkCv" href="../assets/docs/cv-ejemplo.pdf" download>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-download mr-1"></i> Descargar CV</button>
-                                    </a>
+                                    <div class="bt-divisor"></div>
+                                    <div class="bt-cv">
+                                        <div>
+                                            <div class="bt-dato-label">Currículum</div>
+                                            <div class="bt-dato-valor" id="dCvNombre"></div>
+                                        </div>
+                                        <a id="lnkCv" href="../assets/docs/cv-ejemplo.pdf" download>
+                                            <button type="button" class="btn btn-primary"><i class="fa fa-download mr-1"></i> Descargar CV</button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

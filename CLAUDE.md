@@ -79,7 +79,17 @@ Decisiones de las rondas de feedback (2026-07-23):
 - Pausar/activar usa `.btn-outline-negro` (#000); borrar sigue `btn-outline-danger`.
 - Textos de los SweetAlert cortos (una línea).
 - Notas introductorias de formularios con `.bt-nota` (gris #6e6e6e + margen inferior).
-- Botón "Volver" del detalle de postulación va en el card-header de "Datos del candidato".
+- Detalle de postulación: liga "Volver a postulaciones" tipo breadcrumb ARRIBA del
+  título de página (`.bt-volver`); layout de 2 cards — principal con cabecera de
+  candidato (nombre, vacante, badge de estatus — SIN avatar de iniciales, se
+  probó y el usuario lo quitó),
+  datos de contacto en columnas y currículum integrado con botón de descarga;
+  card lateral solo para cambiar estatus.
+- La liga raíz (index.html) redirige a distribuidores/Default.html (Inicio), no
+  directo al módulo: el cliente navega desde el dashboard como lo haría un
+  distribuidor.
+- Fix iOS para input[type=date]: -webkit-appearance none + text-align left en
+  ::-webkit-date-and-time-value (el valor salía centrado/desbordado en iPhone).
 - Subtítulos de página en sentence case ("Mis vacantes").
 - UX mobile de tablas (genérico en bolsatrabajo.css, aplicable a TODAS las tablas
   del dashboard si el dev lo quiere llevar a producción): NO se ocultan columnas
