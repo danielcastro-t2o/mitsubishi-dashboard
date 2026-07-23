@@ -6,14 +6,15 @@ dashboard en producción.
 
 ## Cómo verlo
 
-Los assets usan rutas absolutas (`/assets/...`), igual que producción, así que
-hay que servir la carpeta raíz:
+Servir la carpeta raíz (rutas relativas — funciona en local, GitHub Pages o
+cualquier hosting estático):
 
 ```bash
-python3 -m http.server 8080
+node server.js
 ```
 
-Abrir: <http://localhost:8080/distribuidores/BolsaTrabajo/Vacantes.html>
+Abrir: <http://localhost:8080/> (el `index.html` redirige al módulo Bolsa de
+trabajo).
 
 ## Qué es funcional
 
