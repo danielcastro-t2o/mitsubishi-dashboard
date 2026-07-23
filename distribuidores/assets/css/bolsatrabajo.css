@@ -70,6 +70,27 @@
     border-color: #000;
 }
 
+/* Detalle de postulación en mobile: el chip de estatus va ARRIBA del nombre
+   (en línea propia) y el botón de CV a lo ancho */
+@media (max-width: 767.98px) {
+    .bt-candidato-badge {
+        order: -1;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .card-body .bt-cv {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-body .bt-cv a,
+    .card-body .bt-cv a .btn {
+        width: 100%;
+        display: block;
+    }
+}
+
 /* Visibilidad responsive (el build de Bootstrap del tema no trae d-md-*) */
 .bt-solo-movil { display: none; }
 
@@ -88,15 +109,29 @@
     margin-bottom: 28px;
 }
 
-/* Fix input date en iOS: el valor sale centrado/desbordado con el height del form-control */
+/* Fix input date en iOS/WebKit: el valor sale centrado, y VACÍO el campo se
+   colapsa chiquito hasta que tiene fecha — hay que forzar alto y ancho del
+   contenido interno del input */
 input[type="date"].form-control {
     -webkit-appearance: none;
     appearance: none;
+    min-height: 40px;
+    line-height: normal;
 }
 
 input[type="date"].form-control::-webkit-date-and-time-value {
     text-align: left;
     line-height: normal;
+    margin: 0;
+    width: 100%;
+}
+
+input[type="date"].form-control::-webkit-datetime-edit {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    min-height: 26px;
+    padding: 0;
 }
 
 /* Liga "Volver" tipo breadcrumb, arriba del título de página */
