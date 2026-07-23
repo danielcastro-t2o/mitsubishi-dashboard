@@ -1,0 +1,108 @@
+#sidebar {
+    min-height: 100vh;
+    background-color: #FFF !important;
+}
+
+    #sidebar ul.components {
+        padding: 50px 0 0 !important;
+        font-size:0.9rem;
+    }
+
+    #sidebar ul li a {
+        /*color: #747474 !important;*/
+    }
+
+    #sidebar ul li {
+        border-bottom: 0px solid #eaeaea !important;
+    }
+
+        #sidebar ul li a:hover {
+            background-color: #b1b1b1 !important;
+            color: #FFF !important;
+        }
+
+        #sidebar ul li.active > a {
+            background-color: #E60012 !important;
+            color: #FFF !important;
+        }
+
+.content-area {
+    background-color: #fafafa !important;
+}
+
+.title {
+    background-color: #5669E9;
+    border-radius: 0 !important;
+}
+
+.title h4 {
+    color: #FFF;
+    font-weight: 700;
+}
+
+.subtitle {
+    background-color: rgba(86, 105, 233, 0.65);
+    border-radius: 0 !important;
+}
+
+.subtitle h4 {
+    color: #000;
+    font-weight: 700;
+}
+
+.titulo-card {
+    background-color: rgba(86, 105, 233, 0.35) !important;
+}
+
+.titulo-card h4 {
+    color: #000;
+    font-weight: 700;
+}
+
+.subtitulo-card {
+    background-color: rgba(86, 105, 233, 0.15) !important;
+}
+
+.subtitulo-card h4 {
+    color: #000;
+    font-weight: 700;
+}
+
+b, .descripcion {
+    font-size: 16px;
+}
+
+.header-brand-img {
+    height: 3rem !important;
+}
+
+h4 {
+    margin-top: 0.66em !important;
+}
+
+.logoMenu {
+    /*background: url('/assets/images/brand/logo.png') center no-repeat;*/
+    width: 200px;
+    height: 42px;
+    position: absolute;
+}
+
+.boxAction {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+    .boxAction i {
+        font-size: 80px;
+    }
+.icoCheck {
+    position: relative;
+    top: -102px;
+    left: 81px;
+    font-size: 25px;
+}
+
+.divCarousel {
+    min-height: 250px;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>t2ó | Dashboard</title>
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.png" />
+
+    <link rel="stylesheet" href="../../assets/fonts/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/menu.css">
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Sidemenu Css -->
+    <link href="../../assets/plugins/fullside-menu/css/style.css" rel="stylesheet">
+    <link href="../../assets/plugins/fullside-menu/waves.min.css" rel="stylesheet">
+    <!-- Dashboard Css -->
+    <link href="../../assets/css/dashboard.css" rel="stylesheet">
+    <!-- c3.js Charts Plugin -->
+    <link href="../../assets/plugins/charts-c3/c3-chart.css" rel="stylesheet">
+    <!-- select2 Plugin -->
+    <link href="../../assets/plugins/select2/select2.min.css" rel="stylesheet">
+    <!-- Time picker Plugin -->
+    <link href="../../assets/plugins/time-picker/jquery.timepicker.css" rel="stylesheet">
+    <!-- Date Picker Plugin -->
+    <link href="../../assets/plugins/date-picker/spectrum.css" rel="stylesheet">
+    <!-- Custom scroll bar css-->
+    <link href="../../assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <!-- file Uploads -->
+    <link href="../../assets/plugins/fileuploads/css/dropify.css" rel="stylesheet" type="text/css">
+    <!---Font icons-->
+    <link href="../../assets/plugins/iconfonts/plugin.css" rel="stylesheet">
+    <!-- form-wizard css-->
+    <link href="../../assets/plugins/forn-wizard/css/material-bootstrap-wizard.css" rel="stylesheet">
+    <link href="../../assets/plugins/forn-wizard/css/demo.css" rel="stylesheet">
+    <link href="../assets/css/t2o.css?v=20260330" rel="stylesheet">
+    <link href="../../assets/css/sweetalert.css" rel="stylesheet">
+    <link href="../assets/css/bolsatrabajo.css" rel="stylesheet">
+</head>
+<body>
+    <div id="global-loader"></div>
+    <div class="page">
+        <div class="page-main">
+
+            <div id="header" class="app-header1 header py-3 d-flex shadow">
+                <div class="container-fluid">
+                    <div class="d-flex header-inner-row">
+                        <div class="menu-toggle-button">
+                            <a class="nav-link wave-effect waves-effect waves-button" href="javascript:void(0);" id="sidebarCollapse">
+                                <span class="fa fa-bars"></span>
+                            </a>
+                        </div>
+                        <a class="header-brand" href="../Default.html">
+                            <div class="logoMenu">
+                                <img src="../../assets/images/brand/logo.png">
+                            </div>
+                        </a>
+                        <div class="d-flex order-lg-2 ml-auto header-user-block">
+                            <div class="dropdown d-none d-md-flex mt-1"></div>
+                            <div class="dropdown d-none d-md-flex mt-1"></div>
+                            <div class="dropdown mt-1">
+                                <a href="#" class="nav-link pr-0 leading-none">
+                                    <span class="avatar avatar-md brround" title="Mi Cuenta"><i class="fa fa-user-circle text-primary"></i></span>
+                                    <div class="ml-3 text-light d-none d-sm-flex">
+                                        <span id="Header_lblUser"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-distributor-row">
+                        <div class="form-group">
+                            <span id="Header_lblEmail" class="small font-weight-bold text-color-blue-nufi">Distribuidora</span>
+                            <select id="Header_ddlDistribuidoras" class="form-control">
+                                <option selected="selected" value="1">Distribuidora Demo</option>
+                            </select>
+                        <span class="material-input"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <nav id="sidebar" class="nav-sidebar">
+                    <ul class="list-unstyled components" id="accordion">
+                        <li><a href="../Default.html"><i class="fa fa-home mr-2"></i> Inicio</a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-bullhorn mr-2"></i> Generar UTM</a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-bar-chart mr-2"></i> Reporte Leads</a></li>
+                        <li>
+                            <a href="#Submenu5" class="accordion-toggle wave-effect waves-effect waves-button" data-toggle="collapse" aria-expanded="false"><i class="fa fa-car mr-2"></i> Seminuevos</a>
+                            <ul class="collapse list-unstyled" id="Submenu5" data-parent="#accordion">
+                                <li><a href="javascript:void(0);"> Mis Seminuevos</a></li>
+                                <li><a href="javascript:void(0);"> Alta de Seminuevo</a></li>
+                                <li><a href="javascript:void(0);"> Parámetros</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-cogs mr-2"></i> Datos Distribuidor</a></li>
+                        <li>
+                            <a href="#Submenu6" class="accordion-toggle wave-effect waves-effect waves-button" data-toggle="collapse" aria-expanded="false"><i class="fa fa-wrench mr-2"></i> Servicio</a>
+                            <ul class="collapse list-unstyled" id="Submenu6" data-parent="#accordion">
+                                <li><a href="javascript:void(0);"> Mis Citas de Servicio</a></li>
+                                <li><a href="javascript:void(0);"> Parámetros</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#Submenu7" class="accordion-toggle wave-effect waves-effect waves-button" data-toggle="collapse" aria-expanded="false"><i class="fa fa-id-card mr-2"></i> Prueba de Manejo</a>
+                            <ul class="collapse list-unstyled" id="Submenu7" data-parent="#accordion">
+                                <li><a href="javascript:void(0);"> Mis Prueba de Manejo</a></li>
+                                <li><a href="javascript:void(0);"> Parámetros</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#Submenu8" class="accordion-toggle wave-effect waves-effect waves-button" data-toggle="collapse" aria-expanded="true"><i class="fa fa-briefcase mr-2"></i> Bolsa de Trabajo</a>
+                            <ul class="collapse show list-unstyled" id="Submenu8" data-parent="#accordion">
+                                <li><a href="Vacantes.html"> Mis Vacantes</a></li>
+                                <li><a href="Vacante.html"> Alta de Vacante</a></li>
+                                <li><a href="Postulaciones.html"> Postulaciones <span id="btNuevasBadge"></span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-building mr-2"></i> Distribuidores</a></li>
+                        <li><hr style="border-color: #ddd; margin: 8px 16px;"></li>
+                        <li>
+                            <a id="Menu_LoginStatus2" title="cerrar sesión" class="wave-effect waves-effect waves-button" href="javascript:void(0);">Cerrar sesión</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-area">
+                    <div class="page-header borderLeft">
+                        <div class="page-title">
+                            Dashboard t2ó MX
+                            <br>
+                            <div class="page-subtitle" id="pageSubtitle">Alta de vacante</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="text-success fa fa-plus mr-2"></i>Vacante</h3>
+                                    <div class="col-lg-11 text-right">
+                                        <input type="submit" value="Guardar" id="btnGuardarVacante" class="btn btn-success btGuardarVacante bt-solo-escritorio">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="bt-nota">La vacante se publicará en la bolsa de trabajo del sitio de la asociación. Podrás consultarla en la sección "Postulaciones".</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-lg-6">
+                                            <label class="form-label">Título de la vacante</label>
+                                            <input type="text" id="txtTitulo" maxlength="80" placeholder="Ej. Asesor de Ventas Digitales" class="form-control">
+                                        <span class="material-input"></span></div>
+                                        <div class="form-group col-lg-3">
+                                            <label class="form-label">Vigencia (opcional)</label>
+                                            <input type="date" id="txtVigencia" class="form-control">
+                                        <span class="material-input"></span></div>
+                                        <div class="form-group col-lg-3">
+                                            <label class="form-label">Estatus</label>
+                                            <select id="ddlEstatus" class="form-control">
+                                                <option value="activa">Activa</option>
+                                                <option value="pausada">Pausada</option>
+                                            </select>
+                                        <span class="material-input"></span></div>
+                                    </div>
+                                    <div class="row" id="rowCorreos">
+                                        <div class="form-group col-lg-6">
+                                            <label class="form-label">Mail bolsa de trabajo (separados por ;)</label>
+                                            <input type="text" id="txtCorreos" placeholder="rh@tudistribuidora.mx; gerencia@tudistribuidora.mx" class="form-control">
+                                        <span class="material-input"></span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-lg-12">
+                                            <label class="form-label">Descripción de la vacante</label>
+                                            <textarea id="txtDescripcion" rows="6" placeholder="Funciones, requisitos y experiencia solicitada" class="form-control"></textarea>
+                                        <span class="material-input"></span></div>
+                                    </div>
+                                    <div class="row bt-solo-movil">
+                                        <div class="col-12">
+                                            <input type="submit" value="Guardar" class="btn btn-success btn-block btGuardarVacante bt-solo-movil">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="../../assets/js/vendors/jquery-3.2.1.min.js"></script>
+    <script src="../../assets/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/vendors/jquery.sparkline.min.js"></script>
+    <script src="../../assets/js/vendors/selectize.min.js"></script>
+    <script src="../../assets/js/vendors/jquery.tablesorter.min.js"></script>
+    <script src="../../assets/js/vendors/circle-progress.min.js"></script>
+    <script src="../../assets/plugins/rating/jquery.rating-stars.js"></script>
+    <script src="../../assets/plugins/fullside-menu/jquery.slimscroll.min.js"></script>
+    <script src="../../assets/plugins/fullside-menu/waves.min.js"></script>
+    <script src="../../assets/plugins/select2/select2.full.min.js"></script>
+    <script src="../../assets/plugins/time-picker/jquery.timepicker.js"></script>
+    <script src="../../assets/plugins/time-picker/toggles.min.js"></script>
+    <script src="../../assets/plugins/date-picker/spectrum.js"></script>
+    <script src="../../assets/plugins/date-picker/jquery-ui.js"></script>
+    <script src="../../assets/plugins/input-mask/jquery.maskedinput.js"></script>
+    <script src="../../assets/js/select2.js"></script>
+    <script src="../../assets/plugins/fileuploads/js/dropify.js"></script>
+    <script src="../../assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script src="../../assets/plugins/datatable/jquery.dataTables.min.js"></script>
+    <script src="../../assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/plugins/forn-wizard/js/material-bootstrap-wizard.js"></script>
+    <script src="../../assets/plugins/forn-wizard/js/jquery.validate.min.js"></script>
+    <script src="../../assets/plugins/forn-wizard/js/jquery.bootstrap.js"></script>
+    <script src="../../assets/js/sweetalert.min.js"></script>
+    <script src="../assets/js/bolsatrabajo.js"></script>
+    <script>BT.pageVacante();</script>
+    <script src="../assets/js/common/utils.js"></script>
+    <script src="../assets/js/t2o.js"></script>
+</body>
+</html>

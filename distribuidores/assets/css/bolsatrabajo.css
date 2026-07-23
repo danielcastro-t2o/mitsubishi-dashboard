@@ -1,0 +1,175 @@
+/* Módulo Bolsa de Trabajo — estilos mínimos propios.
+   Todo lo demás reutiliza dashboard.css / t2o.css tal cual producción. */
+
+/* FAB de alta (réplica de #btn-alta-seminuevo: círculo rojo fijo abajo-derecha) */
+#btn-alta-vacante {
+    position: fixed;
+    right: 20px;
+    bottom: 115px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e60012;
+    color: #fff;
+    font-size: 28px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(6, 148, 255, 0.15);
+}
+
+#btn-alta-vacante:hover {
+    color: #fff;
+    opacity: .9;
+}
+
+/* Badges de estatus con paleta Mitsubishi (rojo #e60012 / negro #000 / gris #828282) */
+.bt-badge {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.bt-badge-rojo { background-color: #e60012; }
+.bt-badge-negro { background-color: #000; }
+.bt-badge-gris { background-color: #828282; }
+
+/* Contador redondo de postulaciones */
+.bt-contador {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 7px;
+    border-radius: 11px;
+    background-color: #e60012;
+    color: #fff !important;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+.bt-contador:hover { opacity: .85; }
+
+/* Botón outline negro (pausar / activar) */
+.btn-outline-negro {
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.btn-outline-negro:hover,
+.btn-outline-negro:focus {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+/* Visibilidad responsive (el build de Bootstrap del tema no trae d-md-*) */
+.bt-solo-movil { display: none; }
+
+@media (max-width: 767.98px) {
+    /* t2o.css declara input[type=submit].btn con display:block !important;
+       hay que ganarle en especificidad */
+    .bt-solo-escritorio,
+    input[type="submit"].btn.bt-solo-escritorio { display: none !important; }
+
+    .bt-solo-movil { display: block; width: 100%; }
+}
+
+/* Nota introductoria de formularios */
+.bt-nota {
+    color: #6e6e6e;
+    margin-bottom: 28px;
+}
+
+/* Ficha del candidato (detalle de postulación) */
+.bt-dato-label {
+    color: #001a5e;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.bt-dato-valor {
+    color: #898989;
+    font-size: 15px;
+    margin-bottom: 26px;
+    word-break: break-word;
+}
+
+
+/* ===== Tablas: solo la fila de la tabla hace scroll (los controles de
+   DataTables quedan fijos). Genérico: sirve para cualquier .dataTables_wrapper. ===== */
+.dataTables_wrapper > .row > .col-sm-12:only-child {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ===== Ajustes mobile para tablas (genérico, aplicable a todo el dashboard) ===== */
+@media (max-width: 767.98px) {
+    /* Buscador full width */
+    .dataTables_wrapper .dataTables_filter,
+    .dataTables_wrapper .dataTables_filter label {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    div.dataTables_wrapper div.dataTables_filter input {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Sin "Página 1 de 1"; paginado centrado solo con Anterior / Siguiente */
+    .dataTables_wrapper .dataTables_info { display: none; }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button:not(.previous):not(.next) { display: none; }
+
+    div.dataTables_wrapper div.dataTables_paginate { text-align: center; }
+
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination { justify-content: center; }
+
+    /* Sin gutter en el contenedor de scroll: con padding, el contenido se asoma
+       a la izquierda de las columnas fijas */
+    .dataTables_wrapper > .row > .col-sm-12:only-child {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Con border-collapse, las celdas sticky dejan fugas de 1-2px por las
+       orillas al scrollear; bordes separados lo eliminan */
+    .tblt2o {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    /* Columna fija: SOLO la lupa (acceso al detalle); el resto hace scroll.
+       Fondo sólido obligatorio para que nada se transparente al scrollear. */
+    .tblt2o th:nth-child(1), .tblt2o td:nth-child(1) {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        background-color: #fff;
+        background-clip: padding-box;
+        width: 48px;
+        min-width: 48px;
+        max-width: 48px;
+        box-shadow: 4px 0 6px -2px rgba(0, 0, 0, .12);
+    }
+
+    .tblt2o thead th:nth-child(1) { z-index: 3; }
+
+    /* Fondo sólido también en filas cebreadas (el rgba de Bootstrap se
+       transparenta sobre celdas sticky) */
+    .table-striped.tblt2o tbody tr:nth-of-type(odd) td:nth-child(1) { background-color: #f2f2f2; }
+
+    /* Que el título/nombre respire pero sin comerse la pantalla */
+    .tblt2o th:nth-child(3), .tblt2o td:nth-child(3) { min-width: 140px; }
+}

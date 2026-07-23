@@ -1,0 +1,400 @@
+﻿@font-face {
+    font-family: "FontAwesome";    
+    src: url("../fonts/fonts/fontawesome-webfont.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.swal-text {
+    text-align: center;
+}
+.wpadding {
+    margin:0!important;
+}
+
+.c-left {
+    background-color: #9B0000;
+    height: 100vh;
+    padding: 0 !important;
+    background: linear-gradient(0deg, rgba(6, 66, 255, 0.0), rgb(255 255 255 / 95%)), url(/assets/images/media/loginbg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.c-mobile {
+    background-color: #9B0000;
+    height: 30vh;
+    padding: 0 !important;
+    background: linear-gradient(0deg, rgba(6, 66, 255, 0.0), rgba(6, 66, 255, 0.5)), url('/assets/images/media/loginbg.jpg') no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    /*background: url(/assets/images/brand/logo.png) center no-repeat;*/
+    width: 90%;
+    height: 20%;
+    left: 50%;
+    top: 50%;
+    margin-left: -20%;
+    margin-top: -20%;
+    position: absolute;
+}
+.logo li, .logo-a li{
+    float:left;
+}
+
+.logo-a {
+/*    background: url(/assets/images/brand/logo.png) center no-repeat;*/
+    width: 80%;
+    height: 32%;
+    left: 40%;
+    top: 32%;
+    margin-left: -32%;
+    margin-top: -12%;
+    position: absolute;
+}
+
+.logoSuperior {
+/*    background: url(/assets/images/brand/logo.png) right no-repeat;*/
+    width: 20%;
+    height: 10%;
+    left: 80%;
+    top: 10%;
+    margin-left: -10%;
+    margin-top: -5%;
+    position: absolute;
+}
+
+.logo-subtitle {
+    height: 20%;
+    left: 50%;
+    top: 50%;
+    margin-left: -50%;
+    margin-top: 30% !important;
+    position: absolute;
+}
+
+.logo-subtitle-a {
+    width: 100%;
+    height: 20%;
+    left: 50%;
+    top: 0%;
+    margin-left: -50%;
+    margin-top: 30% !important;
+    position: absolute;
+}
+
+.col-login {
+    max-width: 32rem !important;
+}
+
+#rbMethod tbody tr td input{
+    margin-right:5px;
+}
+
+#rbMethod tbody tr td label{
+    margin-right:10px;
+}
+
+input, textarea {
+    font-family: FontAwesome, sans-serif, Arial;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+#btnEntrar {
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+}
+
+.dataTables_filter{
+    float:right;
+}
+
+    .dataTables_filter label div input[type=search] {
+        width: 250px;
+        margin-left: 0px;
+    }
+
+.strDate {
+    font-size: 11px !important;
+}
+
+.table td {
+    padding: 2px 5px !important;
+    font-size: 13px;
+}
+
+.adfXML {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.tag-teal a {
+    color: #FFF;
+    text-decoration:none;
+}
+
+
+.checkT2o input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+}
+
+.table > thead > tr > th > i{
+    font-size:20px;
+}
+
+#txtYoutube {
+    width: 100%;
+}
+
+#imgGallery .col-md-6 {
+    cursor: grab;
+    transition: opacity 0.2s;
+}
+#imgGallery .col-md-6:active {
+    cursor: grabbing;
+}
+.sortable-ghost {
+    opacity: 0.3;
+}
+
+/* ============================
+   TABS HORIZONTAL (panel-tabs)
+   ============================ */
+.nav.panel-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    border-bottom: 2px solid #E60012;
+}
+
+.nav.panel-tabs > li {
+    float: none;
+}
+
+.nav.panel-tabs > li > a {
+    display: block;
+    padding: 10px 18px;
+    color: #E60012;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid transparent;
+    border-bottom: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.nav.panel-tabs > li > a:hover {
+    background-color: #fce8e8;
+    color: #b30000;
+}
+
+.nav.panel-tabs > li > a.active {
+    color: #fff;
+    background-color: #E60012;
+    border-color: #E60012;
+}
+
+@media (max-width: 576px) {
+    .nav.panel-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav.panel-tabs > li > a {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================
+   HEADER - ESTILOS BASE
+   ============================ */
+
+/* Desktop: header-inner-row y header-distributor-row en la misma fila */
+#header .container-fluid {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#header .header-inner-row {
+    flex: 1;
+    min-width: 0;
+}
+
+.header-distributor-row {
+    flex-shrink: 0;
+}
+
+.header-distributor-row .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+/* Quitar posición absoluta del logo */
+#header .logoMenu {
+    position: relative !important;
+    width: auto;
+    height: auto;
+}
+
+#header .logoMenu img {
+    max-height: 42px;
+    width: auto;
+}
+
+/* ============================
+   HEADER MOBILE (max 767px)
+   ============================ */
+@media (max-width: 767px) {
+
+    #header {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+
+    /* En mobile: container-fluid apila las dos filas */
+    #header .container-fluid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* === FILA 1: hamburger | logo centrado | usuario === */
+    #header .header-inner-row {
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Hamburguesa: izquierda */
+    #header .menu-toggle-button {
+        flex-shrink: 0;
+        margin-top: 0;
+    }
+
+    #header .menu-toggle-button a {
+        padding: 0.3rem 0.5rem;
+        color: #E60012 !important;
+        font-size: 1.5rem;
+    }
+
+    /* Logo: centro */
+    #header .header-brand {
+        flex: 1;
+        display: flex !important;
+        justify-content: center;
+        margin-right: 0;
+        line-height: normal;
+    }
+
+    #header .logoMenu img {
+        max-height: 38px;
+    }
+
+    /* Bloque usuario: derecha */
+    #header .header-user-block {
+        flex-shrink: 0;
+        margin-left: 0 !important;
+        align-items: center;
+    }
+
+    /* Ocultar nombre de usuario en mobile */
+    #header .ml-3.text-light {
+        display: none !important;
+    }
+
+    /* Icono usuario */
+    #header .avatar-md i {
+        font-size: 1.8rem;
+    }
+
+    /* === FILA 2: combo distribuidora a full ancho === */
+    .header-distributor-row {
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+
+    .header-distributor-row .form-group {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .header-distributor-row .form-group label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+
+    .header-distributor-row .form-group .form-control {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================
+   SIDEBAR MOBILE (max 768px)
+   ============================ */
+#sidebar-overlay {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1049;
+    }
+}
+@media (max-width: 768px) {
+    /* Sidebar como drawer fijo, por encima de todo */
+    #sidebar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1050 !important;
+        margin-left: -240px;
+        transition: margin-left 0.3s ease;
+    }
+
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+}
+
+/* =============================================
+   MOBILE: Botones full-width (max-width 767px)
+   ============================================= */
+@media (max-width: 767.98px) {
+    .btn,
+    button.btn,
+    input[type="button"].btn,
+    input[type="submit"].btn,
+    input[type="reset"].btn,
+    a.btn {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* Span dentro de row sin col-* se encoge al contenido — forzar full width */
+    .row > span.form-group {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
